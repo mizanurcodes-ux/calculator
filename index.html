@@ -3,37 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <script src="https://cdn.tailwindcss.com"></script>
-<title>Calculator </title>
+<title>Calculator</title>
 </head>
-<body class="flex justify-center items-center h-screen bg-gray-100">
 
-<div class="calculator bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% p-5 rounded-lg w-64">
+<body class="flex flex-col min-h-screen bg-gray-100">
+
+  <!-- HEADER -->
+  <header class="flex items-center justify-between px-9 py-4 
+                 bg-gradient-to-r from-slate-700 to-slate-900 shadow-lg">
+    <h2 class="text-3xl font-bold text-[#0abde3] tracking-wide">
+      <span class="text-[#ff9f43] text-4xl">Cal</span>culator
+    </h2>
+    <button 
+      id="colorBtn" 
+      class="colorBtn bg-[#7f8c8d] hover:bg-[#6c7a7b] transition-all duration-300 
+             p-3 w-[100px] rounded-2xl shadow-xl 
+             flex items-center justify-center text-white text-xl">
+      <i class="bi bi-brightness-high-fill"></i>
+    </button>
+
+
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="flex flex-grow justify-center items-center">
+
+    <div class="calculator bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 
+                p-6 rounded-2xl  shadow-2xl   w-[80%] sm:w-72"   >
+
+      <input id="display" type="text" 
+             class="bg-amber-100 w-full h-12 mb-4 px-3 rounded-3xl 
+                    text-right text-xl font-semibold shadow-inner"
+             disabled placeholder="0">
+
+      <div class="grid grid-cols-4 gap-3">
+            <button class="bg-red-500 text-white py-2 rounded-lg" onclick="cleanDisplay()">C</button>
+            <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('/')">/</button>
+            <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('*')">*</button>
+            <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('-')">-</button>
     
-    <input id="display" type="text" class="bg-amber-100 w-full h-12 mb-4 px-3 rounded-3xl text-right text-xl" disabled placeholder="0">
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('7')">7</button>
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('8')">8</button>
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('9')">9</button>
+            <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('+')">+</button>
+    
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('4')">4</button>
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('5')">5</button>
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('6')">6</button>
+            <button class="bg-green-500 text-white py-2 rounded-lg" onclick="calculate()">=</button>
+    
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('1')">1</button>
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('2')">2</button>
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('3')">3</button>
+            <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('0')">0</button>
+      </div>
 
-    <div class="grid grid-cols-4 gap-2">
-        <button class="bg-red-500 text-white py-2 rounded-lg" onclick="cleanDisplay()">C</button>
-        <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('/')">/</button>
-        <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('*')">*</button>
-        <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('-')">-</button>
-
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('7')">7</button>
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('8')">8</button>
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('9')">9</button>
-        <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('+')">+</button>
-
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('4')">4</button>
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('5')">5</button>
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('6')">6</button>
-        <button class="bg-green-500 text-white py-2 rounded-lg" onclick="calculate()">=</button>
-
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('1')">1</button>
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('2')">2</button>
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('3')">3</button>
-        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('0')">0</button>
     </div>
-</div>
+
+  </div>
 
 <script src="cal.js"></script>
 </body>
