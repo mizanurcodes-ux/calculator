@@ -1,37 +1,41 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<title>Calculator </title>
 </head>
-<body>
-    <div class="calculator">
-        <input type="text">
-        <div class="buttons">
-            <button>C</button>
-            <button>/</button>
-            <button>*</button>
-            <button>-</button>
+<body class="flex justify-center items-center h-screen bg-gray-100">
 
+<div class="calculator bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% p-5 rounded-lg w-64">
+    
+    <input type="text" class="bg-amber-100 w-full h-12 mb-4 px-3 rounded-3xl text-right text-xl" disabled placeholder="0">
 
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>+</button>
-            
+    
+    <div class="grid grid-cols-4 gap-2">
+        <button class="bg-red-500 text-white py-2 rounded-lg cursor-not-allowed">C</button>
+        <button class="bg-gray-300 py-2 rounded-lg cursor-not-allowed">/</button>
+        <button class="bg-gray-300 py-2 rounded-lg cursor-not-allowed">*</button>
+        <button class="bg-gray-300 py-2 rounded-lg cursor-not-allowed">-</button>
 
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>=</button>
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">7</button>
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">8</button>
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">9</button>
+        <button class="bg-gray-300 py-2 rounded-lg cursor-not-allowed">+</button>
 
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">4</button>
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">5</button>
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">6</button>
+        <button class="bg-green-500 text-white py-2 rounded-lg cursor-not-allowed">=</button>
 
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>0</button>
-        </div>
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">1</button>
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">2</button>
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">3</button>
+        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">0</button>
     </div>
+</div>
+
+<script src="cal.js"></script>
 </body>
 </html>
