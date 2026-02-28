@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,29 +10,28 @@
 
 <div class="calculator bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% p-5 rounded-lg w-64">
     
-    <input type="text" class="bg-amber-100 w-full h-12 mb-4 px-3 rounded-3xl text-right text-xl" disabled placeholder="0">
+    <input id="display" type="text" class="bg-amber-100 w-full h-12 mb-4 px-3 rounded-3xl text-right text-xl" disabled placeholder="0">
 
-    
     <div class="grid grid-cols-4 gap-2">
-        <button class="bg-red-500 text-white py-2 rounded-lg cursor-not-allowed">C</button>
-        <button class="bg-gray-300 py-2 rounded-lg cursor-not-allowed">/</button>
-        <button class="bg-gray-300 py-2 rounded-lg cursor-not-allowed">*</button>
-        <button class="bg-gray-300 py-2 rounded-lg cursor-not-allowed">-</button>
+        <button class="bg-red-500 text-white py-2 rounded-lg" onclick="cleanDisplay()">C</button>
+        <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('/')">/</button>
+        <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('*')">*</button>
+        <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('-')">-</button>
 
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">7</button>
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">8</button>
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">9</button>
-        <button class="bg-gray-300 py-2 rounded-lg cursor-not-allowed">+</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('7')">7</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('8')">8</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('9')">9</button>
+        <button class="bg-gray-300 py-2 rounded-lg" onclick="appendValue('+')">+</button>
 
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">4</button>
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">5</button>
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">6</button>
-        <button class="bg-green-500 text-white py-2 rounded-lg cursor-not-allowed">=</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('4')">4</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('5')">5</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('6')">6</button>
+        <button class="bg-green-500 text-white py-2 rounded-lg" onclick="calculate()">=</button>
 
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">1</button>
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">2</button>
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">3</button>
-        <button class="bg-gray-200 py-2 rounded-lg cursor-not-allowed">0</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('1')">1</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('2')">2</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('3')">3</button>
+        <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('0')">0</button>
     </div>
 </div>
 
