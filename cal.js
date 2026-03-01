@@ -15,6 +15,9 @@ function calculate(){
 }
 
 
+
+
+
   const button = document.getElementById("colorBtn");
 
     button.addEventListener('click', () => {

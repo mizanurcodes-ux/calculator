@@ -10,7 +10,7 @@
 
 <body class="flex flex-col min-h-screen bg-gray-100">
 
-  <!-- HEADER -->
+
   <header class="flex items-center justify-between px-9 py-4 
                  bg-gradient-to-r from-slate-700 to-slate-900 shadow-lg">
     <h2 class="text-3xl font-bold text-[#0abde3] tracking-wide">
@@ -28,11 +28,11 @@
 
   </header>
 
-  <!-- MAIN CONTENT -->
+  
   <div class="flex flex-grow justify-center items-center">
 
     <div class="calculator bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 
-                p-6 rounded-2xl  shadow-2xl   w-[80%] sm:w-72"   >
+                p-6 rounded-2xl  shadow-2xl   w-[80%] sm:w-72">
 
       <input id="display" type="text" 
              class="bg-amber-100 w-full h-12 mb-4 px-3 rounded-3xl 
@@ -59,6 +59,11 @@
             <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('2')">2</button>
             <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('3')">3</button>
             <button class="bg-gray-200 py-2 rounded-lg" onclick="appendValue('0')">0</button>
+
+            <button onclick="square()">x²</button>
+            <button onclick="cube()">x³</button>
+            <button onclick="insertPi()">π</button>
+            <button onclick="squareRoot()">√</button>
       </div>
 
     </div>
